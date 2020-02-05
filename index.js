@@ -62,14 +62,21 @@ const record = [
 
 function superbowlWin(record)
 {
-return record.result === 'W';
+const win =record.find(rec => rec['result'] === 'W');
+
+if (win) {
+  return win.year; 
+} 
 }
+/*
+let result=record.find(function(rec){
+  return (rec.result=='W')});
+  if(res!==undefined)
+  {
+    console.log(res.year);
+    return res.year;
+  }
+  return undefined;
+})
 
-console.log(record.find(superbowlWin));
-
-const sadReality =  
-[ { result: "N/A" }, 
-{ result: "N/A" }, 
-{ result: "N/A" } ]
-
-console.log(sadReality.find(superbowlWin));
+*/
